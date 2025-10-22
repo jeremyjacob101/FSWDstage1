@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSWD - Stage 1 (0-4)</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --radius: 10px;
+            --border: 1px solid #e5e7eb;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            ;
+            color: #222;
+            background: var(--white);
+        }
+
+        h2 {
+            margin: 0 auto 18px auto;
+        }
+
+        .table {
+            border: var(--border);
+            width: 100%;
+        }
+
+        .main-content {
+            max-width: 70%;
+            margin: 0 auto;
+            padding: 25px;
+        }
+
+        #resources {
+            max-width: 85%;
+            margin: 0 auto 25px auto;
+            padding: 25px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: var(--white);
+            border: var(--border);
+            border-radius: var(--radius);
+        }
+
+        .title-holder {
+            text-align: left;
+        }
+
+        .title {
+            color: #3b82f6;
+            font-size: 50px;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            border: var(--border);
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            left: 0;
+            top: 0;
+            margin: 0;
+            background: var(--white);
+            border: var(--border);
+            border-radius: 0 0 15px 0;
+            padding: 15px;
+            gap: 10px;
+            width: fit-content;
+        }
+
+        nav a,
+        .links a,
+        tbody a {
+            text-decoration: none;
+            color: #0ea5e9;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        .links a:hover,
+        tbody a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-top: 28px;
+            background: var(--white);
+            border: var(--border);
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        thead th {
+            background: #dfe9f4;
+            text-align: left;
+            padding: 10px;
+            font-weight: 700;
+            border-bottom: var(--border);
+        }
+
+        tbody td {
+            padding: 10px;
+            border-bottom: var(--border);
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        tbody a {
+            font-weight: 250 !important;
+        }
+
+        .pics,
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .summary {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#description">Description</a>
+        <a href="#students">Students</a>
+        <a href="#impressions">Impressions</a>
+    </nav>
+    <div class="main-content">
+        <header class="header">
+            <div class="title-holder">
+                <div class="title">FSWD</div>
+                <div class="subtitle">Machon Lev</div>
+            </div>
+            <div class="logo">Logo</div>
+        </header>
+
+        <section id="description">
+            <h2>Full-Stack Web Development</h2>
+            <p class="summary">
+                This course introduces students to building complete web applications using modern technologies. It
+                covers the fundamentals of HTML, CSS, and responsive design, continues with JavaScript for dynamic
+                functionality, and progresses to advanced topics such as React, Node.js, and working with databases.
+                Throughout the course, students practice developing both the front-end and back-end of web projects.
+            </p>
+        </section>
+
+        <section id="students">
+            <h2>Students</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Noa Cohen</td>
+                        <td class="phone"><a href="tel:+972-52-555-1823">052-555-1823</a></td>
+                        <td class="email"><a href="mailto:noa.cohen978@gmail.com">noa.cohen978@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Amir Levi</td>
+                        <td class="phone"><a href="tel:+972-52-555-6471">052-555-6471</a></td>
+                        <td class="email"><a href="mailto:amir.levi@outlook.com">amir.levi@outlook.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Yedidyah Mizrahi</td>
+                        <td class="phone"><a href="tel:+972-52-555-9365">052-555-9365</a></td>
+                        <td class="email"><a
+                                href="mailto:yedidyahmizrahi1997@bgu.ac.il">yedidyahmizrahi1997@bgu.ac.il</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dana Friedman</td>
+                        <td class="phone"><a href="tel:+972-52-555-4728">052-555-4728</a></td>
+                        <td class="email"><a href="mailto:dana.friedman@yahoo.com">dana.friedman@yahoo.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tzvi Katz</td>
+                        <td class="phone"><a href="tel:+972-52-555-8510">052-555-8510</a></td>
+                        <td class="email"><a href="mailto:tzvikatz@jct.ac.il">tzvikatz@jct.ac.il</a></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </section>
+
+        <section id="impressions">
+            <h2>Impressions</h2>
+            <div class="pics">
+                <img alt="HTML Pic" />
+                <img alt="CSS Pic" />
+                <img alt="JS Pic" />
+            </div>
+    </div>
+
+    <section id="resources">
+        <h2>More resources</h2>
+        <div class="links">
+            <a href="www.youtube.com/watch?v=_GTMOmRrqkU">Intro to HTML/CSS/JS (devdojo)</a>
+            <a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet">CSS
+                CheatSheet</a>
+            <a href="www.w3schools.com/html/html_tables.asp">HTML Tables</a>
+        </div>
+    </section>
+    </div>
+</body>
+
+</html>
