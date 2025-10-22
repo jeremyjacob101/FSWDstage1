@@ -6,21 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FSWD - Stage 1 (0-4)</title>
     <style>
-        html {
+          html {
             scroll-behavior: smooth;
         }
 
         :root {
             --radius: 10px;
-            --border: 1px solid #e5e7eb;
             --white: #ffffff;
+            --color: #3b82f6;
+            --subcolor: #6b7280;
+            --switch: #8f8f8f;
+            --border: 1px solid #e5e7eb;
+            color-scheme: light;
         }
-
+        html[data-theme='dark'] {
+            --white: #1e1e1e;
+            --color: #0ea5e9;
+            --subcolor: #9ca3af;
+            --switch: #cccccc;
+            --border: 1px solid #374151;
+        }
+        @media (prefers-color-scheme: dark)
+        { html:not([data-theme]) {
+            --white: #ffffff;
+            --color: #3b82f6;
+            --subcolor: #6b7280;
+            --switch: #414141;
+            --border: 1px solid #e5e7eb;
+        }}
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             ;
-            color: #222;
+            color: var(--color);
             background: var(--white);
         }
 
@@ -60,14 +78,14 @@
         }
 
         .title {
-            color: #3b82f6;
+            color: var(--color);
             font-size: 50px;
             line-height: 1;
             margin: 0;
         }
 
         .subtitle {
-            color: #6b7280;
+            color: var(--subcolor);
             font-size: 20px;
         }
 
@@ -97,7 +115,7 @@
         .links a,
         tbody a {
             text-decoration: none;
-            color: #0ea5e9;
+            color: var(--color);
             font-weight: 600;
         }
 
@@ -116,7 +134,7 @@
         }
 
         thead th {
-            background: #dfe9f4;
+            background: var(--white);
             text-align: left;
             padding: 10px;
             font-weight: 700;
@@ -130,7 +148,7 @@
         }
 
         tbody tr:nth-child(even) {
-            background: #f9fafb;
+            background: var(--white);
         }
 
         tbody a {
@@ -147,6 +165,33 @@
         .summary {
             margin: 0;
         }
+        .pics-img {
+            width: 100px;
+            height: auto;
+            border-radius: var(--radius);
+            border: var(--border);
+        }
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            border: var(--border);
+        }
+
+        .toggle {
+            position: fixed;
+            /*simple on and off switch*/
+            width: 50px;    
+            height: 50px;
+            right: 15px;
+            bottom: 15px;
+            background: var(--switch);
+            border: var(--border);
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+
     </style>
 </head>
 
@@ -163,7 +208,9 @@
                 <div class="title">FSWD</div>
                 <div class="subtitle">Machon Lev</div>
             </div>
-            <div class="logo">Logo</div>
+            <div class="logo">
+                <img alt="FSWD Logo-@FreePick" src="images/anti-virus.png" class="logo-img" />
+            </div>
         </header>
 
         <section id="description">
@@ -222,9 +269,9 @@
         <section id="impressions">
             <h2>Impressions</h2>
             <div class="pics">
-                <img alt="HTML Pic" />
-                <img alt="CSS Pic" />
-                <img alt="JS Pic" />
+                <img alt="HTML Pic-@FreePick" src="images/html.png" class="pics-img"/>
+                <img alt="CSS Pic-@Pixel Perfect"  src="images/css-3.png" class="pics-img"/>
+                <img alt="JS Pic-@FreePick" src="images/js.png" class="pics-img"/>
             </div>
     </div>
 
@@ -238,6 +285,60 @@
         </div>
     </section>
     </div>
+    <button id="themeToggle" class="toggle" role="switch" aria-checked="false" aria-labelledby="theme-label" title="Toggle dark mode">
+        <span id="theme-label" class="sr-only">Dark Mode</span>
+    </button>
 </body>
+<script>
+    // /d:/Dokumente/Full-Stack/FSWDstage1/script.js
+// Theme switch that relies on CSS variables defined in your index.html / style.css.
+// CSS side should define styles for :root (light) and .dark (dark) or use [data-theme="dark"].
 
+(function () {
+    const THEME_KEY = 'theme';
+    const TOGGLE_ID = 'themeToggle';
+
+    function applyTheme(theme) {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+            root.classList.add('dark');           // your CSS can target .dark or [data-theme="dark"]
+            root.setAttribute('data-theme', 'dark');
+        } else {
+            root.classList.remove('dark');
+            root.setAttribute('data-theme', 'light');
+        }
+        localStorage.setItem(THEME_KEY, theme);
+        updateToggleButton(theme);
+    }
+
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        applyTheme(isDark ? 'light' : 'dark');
+    }
+
+    function updateToggleButton(theme) {
+        const btn = document.getElementById(TOGGLE_ID);
+        if (!btn) return;
+        btn.setAttribute('aria-pressed', theme === 'dark');
+        // optional: update visible label so users know action
+        btn.textContent = theme === 'dark' ? 'Switch to light' : 'Switch to dark';
+    }
+
+    function initTheme() {
+        const saved = localStorage.getItem(THEME_KEY);
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initial = saved || (prefersDark ? 'dark' : 'light');
+        applyTheme(initial);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initTheme();
+        const btn = document.getElementById(TOGGLE_ID);
+        if (btn) btn.addEventListener('click', toggleTheme);
+    });
+
+    // expose for manual use in console if needed
+    window.toggleTheme = toggleTheme;
+})();
+</script>
 </html>
