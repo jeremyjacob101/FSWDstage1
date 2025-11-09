@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JJZ - Jerusalem Jewish Zoo</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body>
+    <header class="header" aria-label="Header">
+        <div class="inner-header">
+            <a class="title-logo" href="index.html">JJZ - Jerusalem Jewish Zoo</a>
+            <nav class="navbar" aria-label="Primary">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="animals.html">Animals</a></li>
+                    <li><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" aria-label="Main">
+        <section class="content">
+            <div class="page-header">
+                <h1>Book A Zoo Tour!</span></h1>
+                <p>Fill in your details and we will get back to you with a recommended tour of the zoo!</p>
+            </div>
+
+            <form class="form-grid" action="#" method="post">
+                <fieldset>
+                    <legend>Basic Info</legend>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" pattern="^[+0-9 ()-]{7,}$" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Tour Details</legend>
+                    <label>
+                        Tour Type (optional)
+                        <select>
+                            <option value="">Choose...</option>
+                            <option>Water Tour</option>
+                            <option>Dry Land Tour</option>
+                            <option>Cold Weather Tour</option>
+                        </select>
+                    </label>
+                    <label>
+                        Preferred Date (optional)
+                        <input type="date">
+                    </label>
+                    <label>
+                        Hours (1-7)
+                        <input type="number" min="1" max="7" value="5">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Notes</legend>
+                    <label>
+                        Tell us more details about who you are and what kind of adventure you're up for
+                        <textarea rows="3"
+                            placeholder="We'd love to see the large black panther we've heard so much about!..."></textarea>
+                    </label>
+                </fieldset>
+                <div class="form-actions">
+                    <button class="btn" type="submit">Send</button>
+                    <button class="btn" type="reset">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="sidebar" aria-label="Siderbar">
+            <h3>Visit the Zoo!</h3>
+            <address>
+                999 Derech Beit Lechem<br>
+                Jerusalem
+            </address>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
+                    loading="lazy"></iframe>
+            </div>
+            <h3>Contact us with any questions</h3>
+            <a href="tel:+973585559631">058-555-9631</a>
+            <a href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
+        </aside>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+        <p>&copy; 2025 JJZ</p>
+    </footer>
+</body>
+
+</html>

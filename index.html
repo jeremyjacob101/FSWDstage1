@@ -3,342 +3,57 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FSWD - Stage 1 (0-4)</title>
-    <style>
-          html {
-            scroll-behavior: smooth;
-        }
-
-        :root {
-            --radius: 10px;
-            --white: #ffffff;
-            --color: #3b82f6;
-            --subcolor: #6b7280;
-            --switch: #8f8f8f;
-            --border: 1px solid #e5e7eb;
-            color-scheme: light;
-        }
-        html[data-theme='dark'] {
-            --white: #1e1e1e;
-            --color: #0ea5e9;
-            --subcolor: #9ca3af;
-            --switch: #cccccc;
-            --border: 1px solid #374151;
-        }
-        @media (prefers-color-scheme: dark)
-        { html:not([data-theme]) {
-            --white: #ffffff;
-            --color: #3b82f6;
-            --subcolor: #6b7280;
-            --switch: #414141;
-            --border: 1px solid #e5e7eb;
-        }}
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            ;
-            color: var(--color);
-            background: var(--white);
-        }
-
-        h2 {
-            margin: 0 auto 18px auto;
-        }
-
-        .table {
-            border: var(--border);
-            width: 100%;
-        }
-
-        .main-content {
-            max-width: 70%;
-            margin: 0 auto;
-            padding: 25px;
-        }
-
-        #resources {
-            max-width: 85%;
-            margin: 0 auto 25px auto;
-            padding: 25px;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: var(--white);
-            border: var(--border);
-            border-radius: var(--radius);
-        }
-
-        .title-holder {
-            text-align: left;
-        }
-
-        .title {
-            color: var(--color);
-            font-size: 50px;
-            line-height: 1;
-            margin: 0;
-        }
-
-        .subtitle {
-            color: var(--subcolor);
-            font-size: 20px;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: var(--radius);
-            border: var(--border);
-        }
-
-        nav {
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            left: 0;
-            top: 0;
-            margin: 0;
-            background: var(--white);
-            border: var(--border);
-            border-radius: 0 0 15px 0;
-            padding: 15px;
-            gap: 10px;
-            width: fit-content;
-        }
-
-        nav a,
-        .links a,
-        tbody a {
-            text-decoration: none;
-            color: var(--color);
-            font-weight: 600;
-        }
-
-        nav a:hover,
-        .links a:hover,
-        tbody a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-top: 28px;
-            background: var(--white);
-            border: var(--border);
-            border-radius: 12px;
-            padding: 18px;
-        }
-
-        thead th {
-            background: var(--white);
-            text-align: left;
-            padding: 10px;
-            font-weight: 700;
-            border-bottom: var(--border);
-        }
-
-        tbody td {
-            padding: 10px;
-            border-bottom: var(--border);
-            vertical-align: top;
-        }
-
-        tbody tr:nth-child(even) {
-            background: var(--white);
-        }
-
-        tbody a {
-            font-weight: 250 !important;
-        }
-
-        .pics,
-        .links {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-        }
-
-        .summary {
-            margin: 0;
-        }
-        .pics-img {
-            width: 100px;
-            height: auto;
-            border-radius: var(--radius);
-            border: var(--border);
-        }
-        .logo-img {
-            width: 80px;
-            height: 80px;
-            border-radius: var(--radius);
-            border: var(--border);
-        }
-
-        .toggle {
-            position: fixed;
-            /*simple on and off switch*/
-            width: 50px;    
-            height: 50px;
-            right: 15px;
-            bottom: 15px;
-            background: var(--switch);
-            border: var(--border);
-            border-radius: 15px;
-            cursor: pointer;
-
-        }
-
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JJZ - Jerusalem Jewish Zoo</title>
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#description">Description</a>
-        <a href="#students">Students</a>
-        <a href="#impressions">Impressions</a>
-    </nav>
-    <div class="main-content">
-        <header class="header">
-            <div class="title-holder">
-                <div class="title">FSWD</div>
-                <div class="subtitle">Machon Lev</div>
-            </div>
-            <div class="logo">
-                <img alt="FSWD Logo-@FreePick" src="images/anti-virus.png" class="logo-img" />
-            </div>
-        </header>
-
-        <section id="description">
-            <h2>Full-Stack Web Development</h2>
-            <p class="summary">
-                This course introduces students to building complete web applications using modern technologies. It
-                covers the fundamentals of HTML, CSS, and responsive design, continues with JavaScript for dynamic
-                functionality, and progresses to advanced topics such as React, Node.js, and working with databases.
-                Throughout the course, students practice developing both the front-end and back-end of web projects.
-            </p>
-        </section>
-
-        <section id="students">
-            <h2>Students</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Noa Cohen</td>
-                        <td class="phone"><a href="tel:+972-52-555-1823">052-555-1823</a></td>
-                        <td class="email"><a href="mailto:noa.cohen978@gmail.com">noa.cohen978@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Amir Levi</td>
-                        <td class="phone"><a href="tel:+972-52-555-6471">052-555-6471</a></td>
-                        <td class="email"><a href="mailto:amir.levi@outlook.com">amir.levi@outlook.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Yedidyah Mizrahi</td>
-                        <td class="phone"><a href="tel:+972-52-555-9365">052-555-9365</a></td>
-                        <td class="email"><a
-                                href="mailto:yedidyahmizrahi1997@bgu.ac.il">yedidyahmizrahi1997@bgu.ac.il</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dana Friedman</td>
-                        <td class="phone"><a href="tel:+972-52-555-4728">052-555-4728</a></td>
-                        <td class="email"><a href="mailto:dana.friedman@yahoo.com">dana.friedman@yahoo.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Tzvi Katz</td>
-                        <td class="phone"><a href="tel:+972-52-555-8510">052-555-8510</a></td>
-                        <td class="email"><a href="mailto:tzvikatz@jct.ac.il">tzvikatz@jct.ac.il</a></td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </section>
-
-        <section id="impressions">
-            <h2>Impressions</h2>
-            <div class="pics">
-                <img alt="HTML Pic-@FreePick" src="images/html.png" class="pics-img"/>
-                <img alt="CSS Pic-@Pixel Perfect"  src="images/css-3.png" class="pics-img"/>
-                <img alt="JS Pic-@FreePick" src="images/js.png" class="pics-img"/>
-            </div>
-    </div>
-
-    <section id="resources">
-        <h2>More resources</h2>
-        <div class="links">
-            <a href="www.youtube.com/watch?v=_GTMOmRrqkU">Intro to HTML/CSS/JS (devdojo)</a>
-            <a href="https://www.codecademy.com/learn/learn-css/modules/learn-css-selectors-visual-rules/cheatsheet">CSS
-                CheatSheet</a>
-            <a href="www.w3schools.com/html/html_tables.asp">HTML Tables</a>
+    <header class="header" aria-label="Header">
+        <div class="inner-header">
+            <a class="title-logo" href="index.html">JJZ - Jerusalem Jewish Zoo</a>
+            <nav class="navbar" aria-label="Primary">
+                <ul>
+                    <li><a class="nav-link active" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="animals.html">Animals</a></li>
+                    <li><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+
+    <section id="top" aria-label="Hero">
+        <div>hero</div>
     </section>
-    </div>
-    <button id="themeToggle" class="toggle" role="switch" aria-checked="false" aria-labelledby="theme-label" title="Toggle dark mode">
-        <span id="theme-label" class="sr-only">Dark Mode</span>
-    </button>
+
+    <main id="main" aria-label="Main">
+        <section class="content">
+            <h2 id="zoo-tips">Quick zoo tips</h2>
+            <ul class="zoo-checklist">
+                <li>Bring water and food with you!</li>
+                <li>Bring a portable charger for electronics!</li>
+                <li>Bring bread and chips to feed the animals!</li>
+            </ul>
+        </section>
+
+        <aside aria-label="Sidebar">
+            <h3>Further Research</h3>
+            <ol>
+                <li><a href="https://en.wikipedia.org/wiki/Zoo" target="_blank" rel="noopener">Zoos</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Mobile_phone" target="_blank" rel="noopener">Phones</a></li>
+            </ol>
+            <nav>
+                <ul>
+                    <li><a href="#top">Back to top</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+        <p>&copy; 2025 JJZ</p>
+    </footer>
 </body>
-<script>
-    // /d:/Dokumente/Full-Stack/FSWDstage1/script.js
-// Theme switch that relies on CSS variables defined in your index.html / style.css.
-// CSS side should define styles for :root (light) and .dark (dark) or use [data-theme="dark"].
 
-(function () {
-    const THEME_KEY = 'theme';
-    const TOGGLE_ID = 'themeToggle';
-
-    function applyTheme(theme) {
-        const root = document.documentElement;
-        if (theme === 'dark') {
-            root.classList.add('dark');           // your CSS can target .dark or [data-theme="dark"]
-            root.setAttribute('data-theme', 'dark');
-        } else {
-            root.classList.remove('dark');
-            root.setAttribute('data-theme', 'light');
-        }
-        localStorage.setItem(THEME_KEY, theme);
-        updateToggleButton(theme);
-    }
-
-    function toggleTheme() {
-        const isDark = document.documentElement.classList.contains('dark');
-        applyTheme(isDark ? 'light' : 'dark');
-    }
-
-    function updateToggleButton(theme) {
-        const btn = document.getElementById(TOGGLE_ID);
-        if (!btn) return;
-        btn.setAttribute('aria-pressed', theme === 'dark');
-        // optional: update visible label so users know action
-        btn.textContent = theme === 'dark' ? 'Switch to light' : 'Switch to dark';
-    }
-
-    function initTheme() {
-        const saved = localStorage.getItem(THEME_KEY);
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const initial = saved || (prefersDark ? 'dark' : 'light');
-        applyTheme(initial);
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        initTheme();
-        const btn = document.getElementById(TOGGLE_ID);
-        if (btn) btn.addEventListener('click', toggleTheme);
-    });
-
-    // expose for manual use in console if needed
-    window.toggleTheme = toggleTheme;
-})();
-</script>
 </html>
