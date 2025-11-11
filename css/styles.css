@@ -10,6 +10,7 @@
   --max: 999999;
   --max-px: 999999px;
   --radius: 12px;
+  --gap-padding: 20px;
   --shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
 }
 
@@ -22,6 +23,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--gap-padding) + 4.5rem + var(--gap-padding));
 }
 
 body {
@@ -32,7 +34,7 @@ body {
 }
 
 main {
-  margin-top: calc(20px + 4.5rem + 20px);
+  margin-top: calc(var(--gap-padding) + 4.5rem + var(--gap-padding));
 }
 
 h1 {
@@ -68,7 +70,7 @@ a:hover {
   z-index: var(--max);
   color: var(--white);
   position: fixed;
-  top: 20px;
+  top: var(--gap-padding);
   padding: 1rem 2rem;
   margin: 0 2%;
   width: 96%;
@@ -79,7 +81,7 @@ a:hover {
 .header-top-blur {
   position: fixed;
   top: 0;
-  height: calc(20px + 4.5rem);
+  height: calc(var(--gap-padding) + 4.5rem);
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: var(--max);
@@ -140,7 +142,7 @@ a:hover {
 .hero {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: var(--gap-padding);
   margin: 0 5%;
   width: 90%;
 }
@@ -165,7 +167,7 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  padding: 20px;
+  padding: var(--gap-padding);
 }
 
 .zoo-checklist {
@@ -182,27 +184,32 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.warning p {
+  padding: 0 var(--gap-padding);
+}
+
 .reviews {
   background-color: #d1d3d4;
   border-radius: var(--radius);
   color: var(--black);
   display: flex;
   flex-direction: column;
-  margin: 20px 5%;
-  padding: 0px 20px 20px 20px;
+  margin: var(--gap-padding) 5%;
+  padding: 0 var(--gap-padding) var(--gap-padding);
 }
 
 .review-cards {
   display: flex;
   overflow-x: auto;
   flex-direction: row;
-  gap: 20px;
+  gap: var(--gap-padding);
+  border-radius: var(--radius);
 }
 
 .review-card {
   background-color: #4a6d6e;
   width: 275px;
-  padding: 20px;
+  padding: var(--gap-padding);
   flex-shrink: 0;
   border-radius: var(--radius);
 }
@@ -223,16 +230,16 @@ a:hover {
   align-items: center;
   text-decoration: none;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: var(--gap-padding);
+  right: var(--gap-padding);
   outline: none;
   background: linear-gradient(45deg, var(--label-blue), var(--label-blue-2));
   color: white;
   cursor: pointer;
   padding: 12px 12px;
-  height: 30px;
-  width: 30px;
-  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
   border-radius: var(--max-px);
   transition: all 0.3s ease;
   box-shadow: var(--shadow);
@@ -245,6 +252,21 @@ a:hover {
   text-decoration: none;
 }
 
+.footer {
+  position: relative;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer p {
+  position: absolute;
+  left: var(--gap-padding);
+  bottom: var(--gap-padding);
+  margin: 0;
+  padding: 0;
+}
+
 /* Responsive*/
 @media (max-width: 768px) {
   .inner-header {
@@ -252,7 +274,7 @@ a:hover {
     align-items: flex-start;
   }
 
-  .navbar ul {
+  .navbar {
     flex-direction: column;
     gap: 0.8rem;
     width: 100%;
