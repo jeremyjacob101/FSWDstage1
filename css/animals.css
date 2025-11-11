@@ -1,18 +1,3 @@
-:root {
-    --white: #ffffff;
-    --black: #000000;
-    --bg: #ac7016be;
-    --text: #e5e7eb;
-    --accent: #5f3b01;
-    --accent-2: #5a893d;
-    --label-blue: #3b82f6;
-    --label-blue-2: #0ea5e9;
-    --max: 999999;
-    --max-px: 999999px;
-    --radius: 12px;
-    --shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
-}
-
 .animal-card {
     display: grid;
     border-radius: var(--border);
