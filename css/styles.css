@@ -189,6 +189,7 @@ a:hover {
 .backToTop:hover {
   background: linear-gradient(135deg, #0ea5e9, #3b82f6);
   transform: scale(1.1);
+  text-decoration: none;
 }
 
 /*Tours Table Styling */
