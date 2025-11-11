@@ -12,3 +12,64 @@
     --radius: 12px;
     --shadow: 0 5px 25px rgba(255, 255, 255, 0.2);
 }
+
+.tours-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.table-header {
+    background: linear-gradient(90deg, var(--label-blue), var(--label-blue-2));
+    text-align: left;
+    color: var(--black);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.table-header th {
+    padding: 1rem 1.2rem;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Body rows */
+.table-row td {
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* First column (Tour Category) */
+.head-box {
+    font-weight: 600;
+}
+
+/* Hover effect */
+.tours-table tbody tr:hover {
+    background-color: #eef6ff;
+    transition: background-color 0.2s ease;
+}
+
+.hour-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 2rem 0.1rem;
+    font-size: 1rem;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.menu-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+}
