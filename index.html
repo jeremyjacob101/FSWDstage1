@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JJZ - Jerusalem Jewish Zoo</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="script/script.js" defer></script>
 </head>
 
 <body>
@@ -24,11 +23,13 @@
         </div>
     </header>
 
-    <section id="top" aria-label="Hero">
-        <div>hero</div>
-    </section>
+    <main id="main" id="top" aria-label="Main">
+        <section class="hero" aria-label="Hero">
+            <div class="hero-card">
+                <img class="hero-img" src="https://cdn.stocksnap.io/img-thumbs/960w/animals-mammals_SQZ59RKJXH.jpg">
+            </div>
+        </section>
 
-    <main id="main" aria-label="Main">
         <section class="content">
             <h2 id="zoo-tips">Quick zoo tips</h2>
             <ul class="zoo-checklist">
@@ -41,7 +42,8 @@
 
         <section class="warning" aria-label="Warning">
             <h2>Important Notice</h2>
-            <p>We provide our own food for the animals for a good price! Do not bring your own food, as it can hurt the animals</p>
+            <p>We provide our own food for the animals for a good price! Do not bring your own food, as it can hurt the
+                animals</p>
             <p>More information you can find under our <a class="see-more" href="tours.html">Tours</a> page.</p>
         </section>
 
@@ -53,7 +55,7 @@
             </ol>
 
         </aside>
-        <button id="backToTop" title="Go to top">↑</button>
+        <a class="backToTop" href="#top">↑</a>
     </main>
 
     <footer class="footer" aria-label="Footer">
