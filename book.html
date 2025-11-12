@@ -24,72 +24,87 @@
     </header>
 
     <main aria-label="Main">
-        <div class="page-header">
-            <h1>Book A Zoo Tour!</h1>
-            <p>Fill in your details and we will get back to you with a recommended tour of the zoo!</p>
-        </div>
+        <section class="form-content">
+            <header class="page-header">
+                <h1>Book A Zoo Tour</h1>
+                <p>Fill in your details and we will get back to you with a recommended tour of the zoo.</p>
+            </header>
 
-        <form class="form-grid" action="#" method="post">
-            <fieldset class="basic-info">
-                <legend>Basic Info</legend>
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number" pattern="^[+0-9 ()-]{7,}$" required>
-            </fieldset>
-            <fieldset class="basic-info">
-                <legend>Tour Details</legend>
-                <label>
-                    Tour Type (optional)
-                    <select>
-                        <option value="">Choose...</option>
-                        <option>Water Tour</option>
-                        <option>Dry Land Tour</option>
-                        <option>Cold Weather Tour</option>
-                    </select>
-                </label>
-                <label>
-                    Preferred Date (optional)
-                    <input type="date">
-                </label>
-                <label>
-                    Hours (1-7)
-                    <input type="number" min="1" max="7" value="5">
-                </label>
-            </fieldset>
-            <fieldset class="basic-info">
-                <legend>Notes</legend>
-                <label>
-                    Tell us more details about who you are and what kind of adventure you're up for
-                    <textarea rows="3"
-                        placeholder="We'd love to see the large black panther we've heard so much about!..."></textarea>
-                </label>
-            </fieldset class="basic-info">
-            <div class="form-actions">
-                <button class="btn" type="submit">Send</button>
-                <button class="btn" type="reset">Reset</button>
-            </div>
-        </form>
+            <form class="form-grid" action="#" method="post">
+                <fieldset class="basic-info">
+                    <legend>Basic Info</legend>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" pattern="^[+0-9 ()-]{7,}$" required>
+                </fieldset>
+                <fieldset class="basic-info">
+                    <legend>Tour Details</legend>
+                    <label>
+                        Tour Type (optional)
+                        <select>
+                            <option value="">Choose...</option>
+                            <option>Water Tour</option>
+                            <option>Dry Land Tour</option>
+                            <option>Cold Weather Tour</option>
+                        </select>
+                    </label>
+                    <label>
+                        Preferred Date (optional)
+                        <input type="date">
+                    </label>
+                    <label>
+                        Hours (1-7)
+                        <input type="number" min="1" max="7" value="5">
+                    </label>
+                </fieldset>
+                <fieldset class="basic-info">
+                    <legend>Notes</legend>
+                    <label>
+                        Tell us more details about who you are and what kind of adventure you're up for
+                        <textarea rows="3"
+                            placeholder="We'd love to see the large black panther we've heard so much about!..."></textarea>
+                    </label>
+                </fieldset class="basic-info">
+                <div class="form-actions">
+                    <button class="btn" type="submit">Send</button>
+                    <button class="btn" type="reset">Reset</button>
+                </div>
+            </form>
 
-        <aside class="sidebar" aria-label="Siderbar">
-            <h3>Visit the Zoo!</h3>
-            <address>
-                999 Derech Beit Lechem<br>
-                Jerusalem
-            </address>
-            <div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
-                    loading="lazy"></iframe>
-            </div>
-            <h3>Contact us with any questions</h3>
-            <a href="tel:+973585559631">058-555-9631</a>
-            <a href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
-        </aside>
+            <aside class="sidebar" aria-label="Siderbar">
+                <h3>Visit the Zoo!</h3>
+                <address>
+                    999 Derech Beit Lechem<br>
+                    Jerusalem
+                </address>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
+                        loading="lazy"></iframe>
+                </div>
+                <h3>Contact us with any questions</h3>
+                <a href="tel:+973585559631">058-555-9631</a>
+                <a href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
+            </aside>
+        </section>
         <a class="backToTop" href="#top">↑</a>
     </main>
 
     <footer class="footer" aria-label="Footer">
-        <p>&copy; 2025 JJZ</p>
+        <p class="copyright">&copy; 2025 JJZ</p>
+        <div class="footer-div">
+            <p>Contact us with any questions!</p>
+            <div class="footer-infos">
+                <div class="footer-info">
+                    <img class="footer-icon" src="images/utils/phone.svg">
+                    <a class="footer-icon-text" href="tel:+973585559631">058-555-9631</a>
+                </div>
+                <div class="footer-info">
+                    <img class="footer-icon" src="images/utils/mail.svg">
+                    <a class="footer-icon-text" href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 

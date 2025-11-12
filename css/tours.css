@@ -1,7 +1,17 @@
+.tours-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tours-div {
+    width: 70%;
+}
+
 .tours-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
+    margin: var(--gap-padding);
     font-size: 1rem;
     background-color: var(--white);
     border-radius: var(--radius);
@@ -22,19 +32,16 @@
     font-weight: 600;
 }
 
-/* Body rows */
 .table-row td {
     padding: 1rem 1.2rem;
     color: var(--black);
     border-bottom: 1px solid #e5e7eb;
 }
 
-/* First column (Tour Category) */
 .head-box {
     font-weight: 600;
 }
 
-/* Hover effect */
 .tours-table tbody tr:hover {
     background-color: #eef6ff;
     transition: background-color 0.2s ease;
