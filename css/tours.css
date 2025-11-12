@@ -76,7 +76,7 @@
     margin: 0;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    width: 60%;
+    width: 50%;
 }
 
 .warning>p {

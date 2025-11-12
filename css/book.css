@@ -31,7 +31,7 @@
     word-break: break-word;
 }
 
-.sidebar>iframe {
+.sidebar iframe {
     border: 0;
     width: 100%;
     min-height: 250px;
