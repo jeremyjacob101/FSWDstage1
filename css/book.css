@@ -1,11 +1,13 @@
 .form-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    margin: 0 5%;
+    gap: 100px;
 }
 
 .sidebar {
-    background: #f9fafb;
+    background: var(--off-white);
     border-radius: 1rem;
     padding: 1.5rem 1.25rem;
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
@@ -42,19 +44,20 @@
 .form-grid {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--gap-padding);
+    width: 400px;
 }
 
 .form-grid fieldset {
     border: 1px solid #e5e7eb;
     border-radius: 0.9rem;
-    padding: 1.25rem;
-    background-color: #ffffff;
+    padding: var(--gap-padding);
+    background-color: var(--white);
 }
 
 .form-grid legend {
-    padding: 0 0.3rem;
-    padding-top: 1.5rem;
+    padding-top: 50px;
+    padding-inline: 0;
     font-weight: 600;
     font-size: 0.95rem;
     color: #111827;
@@ -71,7 +74,7 @@
     font-size: 0.95rem;
     font-family: inherit;
     box-sizing: border-box;
-    background-color: #f9fafb;
+    background-color: var(--off-white);
     transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
@@ -80,7 +83,7 @@
 .form-grid textarea:focus {
     outline: none;
     border-color: #2563eb;
-    background-color: #ffffff;
+    background-color: var(--white);
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
@@ -103,13 +106,13 @@
 
 .btn {
     border: none;
-    border-radius: 999px;
+    border-radius: var(--max-px);
     padding: 0.6rem 1.4rem;
     font-size: 0.95rem;
     cursor: pointer;
     font-weight: 500;
     background: #1d4ed8;
-    color: #ffffff;
+    color: var(--white);
     transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
