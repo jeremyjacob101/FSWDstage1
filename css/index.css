@@ -4,6 +4,8 @@
     gap: var(--gap-padding);
     margin: 0 5%;
     width: 90%;
+    border-top: 1px var(--white) solid;
+    padding-top: var(--gap-padding);
 }
 
 .hero-main {

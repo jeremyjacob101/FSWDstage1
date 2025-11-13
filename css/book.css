@@ -186,24 +186,12 @@
 }
 
 @media (max-width: 768px) {
-    main[aria-label="Main"] {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        order: 2;
-    }
-
-    .content {
-        order: 1;
-    }
-
     .form-actions {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .btn {
+    .button {
         width: 100%;
         text-align: center;
     }

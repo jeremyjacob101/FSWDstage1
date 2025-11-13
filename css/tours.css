@@ -46,11 +46,13 @@
     text-align: center;
 }
 
-.hours, .seasons {
+.hours,
+.seasons {
     text-align: center;
 }
 
-.tours-table tbody tr:hover {
+.tours-table tbody tr:hover,
+.menu-table tbody tr:hover {
     background-color: #eef6ff;
     transition: background-color 0.2s ease;
 }
