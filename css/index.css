@@ -20,7 +20,7 @@
     overflow: hidden;
     border-radius: var(--radius);
     width: 100%;
-    height: 600px;
+    height: 560px;
 }
 
 .hero-img {
@@ -89,6 +89,10 @@
     padding: var(--gap-padding);
 }
 
+.zoo-tips {
+    text-align: center;
+}
+
 .zoo-checklist {
     padding-inline-start: 30px;
 }
@@ -141,4 +145,9 @@
 .review-star-img {
     width: 20px;
     height: 20px;
+}
+
+.review-tour {
+    font-style: italic;
+    margin-top: 0;
 }

@@ -44,8 +44,8 @@
                             <select>
                                 <option value="">Choose...</option>
                                 <option>General Tour</option>
-                                <option>Summer Tour</option>
                                 <option>Water Tour</option>
+                                <option>Summer Tour</option>
                                 <option>Cold Weather Tour</option>
                             </select>
                         </label>
@@ -118,11 +118,22 @@
                 <fieldset class="basic-info review">
                     <legend>Review</legend>
                     <label>
+                        Rating
+                        <select name="rating" required>
+                            <option value="">Choose...</option>
+                            <option>⭐</option>
+                            <option>⭐⭐</option>
+                            <option>⭐⭐⭐</option>
+                            <option>⭐⭐⭐⭐</option>
+                            <option>⭐⭐⭐⭐⭐</option>
+                        </select>
+                    </label>
+                    <label>
                         Tell us how you enjoyed your tour.
                         <textarea rows="3"
                             placeholder="We loved seeing the penguins on our Cold Weather Tour..."></textarea>
                     </label>
-                </fieldset class="basic-info">
+                </fieldset>
                 <div class="form-actions">
                     <button class="send-button" type="submit">Send</button>
                     <button class="reset-button" type="reset">Reset</button>
