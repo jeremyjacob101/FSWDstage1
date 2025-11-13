@@ -31,13 +31,13 @@
                     <p>Fill in your details and we will get back to you with a recommended tour of the zoo.</p>
                 </header>
                 <div class="top-info">
-                    <fieldset class="basic-info">
+                    <fieldset class="basic-info basic-1">
                         <legend>Basic Info</legend>
                         <input type="text" name="name" placeholder="Full Name" required>
                         <input type="email" name="email" placeholder="Email" required>
                         <input type="tel" name="phone" placeholder="Phone Number" pattern="^[+0-9 ()-]{7,}$" required>
                     </fieldset>
-                    <fieldset class="basic-info">
+                    <fieldset class="basic-info details">
                         <legend>Tour Details</legend>
                         <label>
                             Tour Type (optional)
@@ -55,35 +55,69 @@
                         </label>
                     </fieldset>
                 </div>
-                <fieldset class="basic-info">
+                <fieldset class="basic-info notes">
                     <legend>Notes</legend>
                     <label>
-                        Tell us more details about who you are and what kind of adventure you're up for
+                        Tell us more details about who you are and what kind of adventure you're up for.
                         <textarea rows="3"
                             placeholder="We'd love to see the large black panther we've heard so much about!..."></textarea>
                     </label>
                 </fieldset class="basic-info">
                 <div class="form-actions">
-                    <button class="btn" type="submit">Send</button>
-                    <button class="btn" type="reset">Reset</button>
+                    <button class="send-button" type="submit">Send</button>
+                    <button class="reset-button" type="reset">Reset</button>
                 </div>
             </form>
 
             <aside class="sidebar" aria-label="Siderbar">
-                <h3 class="sidebar-header">Visit the Zoo!</h3>
+                <h4 class="sidebar-header">Visit the Zoo!</h4>
                 <address class="siderbar-address">
                     999 Derech Beit Lechem<br>
                     Jerusalem
                 </address>
-                <div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
-                        loading="lazy"></iframe>
-                </div>
-                <h3 class="sidebar-header">Zoo Hours</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
+                    loading="lazy"></iframe>
+                <h4 class="sidebar-header">Zoo Hours</h4>
                 <a class="sidebar-info" href="tel:+973585559631">058-555-9631</a>
                 <a class="sidebar-info" href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
             </aside>
+        </section>
+        <section class="review-section">
+            <form class="form-grid" action="#" method="post">
+                <header class="page-header">
+                    <h2>Leave a Review</h2>
+                    <p>Visited us already? Take a minute to leave your thoughts!</p>
+                </header>
+
+                <fieldset class="basic-info basic-2">
+                    <legend>Basic Info</legend>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <label>
+                        Tour Type
+                        <select required>
+                            <option value="">Choose...</option>
+                            <option>General Tour</option>
+                            <option>Summer Tour</option>
+                            <option>Water Tour</option>
+                            <option>Cold Weather Tour</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset class="basic-info review">
+                    <legend>Review</legend>
+                    <label>
+                        Tell us how you enjoyed your tour.
+                        <textarea rows="3"
+                            placeholder="We loved seeing the penguins on our Cold Weather Tour..."></textarea>
+                    </label>
+                </fieldset class="basic-info">
+                <div class="form-actions">
+                    <button class="send-button" type="submit">Send</button>
+                    <button class="reset-button" type="reset">Reset</button>
+                </div>
+            </form>
         </section>
         <a class="backToTop" href="#top">↑</a>
     </main>

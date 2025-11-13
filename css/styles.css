@@ -6,8 +6,8 @@
   --text: #e5e7eb;
   --accent: #5f3b01;
   --accent-2: #5a893d;
-  --label-blue: #739105;
-  --label-blue-2: #828e03;
+  --label-yellow: #739105;
+  --label-yellow-2: #828e03;
   --max: 999999;
   --max-px: 999999px;
   --radius: 12px;
@@ -37,6 +37,7 @@ body {
 
 main {
   margin-top: calc(var(--gap-padding) + 4.5rem + var(--gap-padding));
+  justify-content: center;
 }
 
 h1 {
@@ -155,7 +156,7 @@ a:hover {
   position: fixed;
   bottom: var(--gap-padding);
   right: var(--gap-padding);
-  background: linear-gradient(45deg, var(--label-blue), var(--label-blue-2));
+  background: linear-gradient(45deg, var(--label-yellow), var(--label-yellow-2));
   color: var(--white);
   height: 40px;
   width: 40px;
@@ -167,7 +168,7 @@ a:hover {
 }
 
 .backToTop:hover {
-  background: linear-gradient(45deg, var(--label-blue-2), var(--label-blue));
+  background: linear-gradient(45deg, var(--label-yellow-2), var(--label-yellow));
   transform: scale(1.1);
   text-decoration: none;
 }
