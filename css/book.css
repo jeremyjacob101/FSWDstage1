@@ -176,13 +176,32 @@
     box-shadow: 0 3px 8px rgba(148, 163, 184, 0.4);
 }
 
-.review-section {
+.review-section, .map-section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 5%;
     gap: var(--gap-padding);
+}
+
+.map-section {
+    margin: 0 5% var(--gap-padding) 5%;
+    padding-bottom: var(--gap-padding);
+    gap: var(--gap-padding);
+    border-bottom: 1px var(--white) solid;
+}
+
+.map-img {
+    width: 50%;
+    margin-bottom: var(--gap-padding);
+}
+
+.map-img > img {
+    display: block;
+    border-radius: var(--radius);
+    width: 100%;
+    height: auto;
 }
 
 @media (max-width: 768px) {
