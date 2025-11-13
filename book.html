@@ -71,16 +71,17 @@
 
             <aside class="sidebar" aria-label="Sidebar">
                 <h4 class="sidebar-header">Visit the Zoo!</h4>
-                <address class="sidebar-address">
-                    999 Derech Beit Lechem<br>
+                <address class="sidebar-location">
+                    <div class="sidebar-exact-location"><img class="footer-icon" src="images/utils/pin.svg" alt="">
+                        999 Derech Beit Lechem</div>
                     Jerusalem
                 </address>
                 <iframe title="Map showing the location of JJZ - Jerusalem Jewish Zoo"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1696.2244697549845!2d35.22420672785785!3d31.758239232376994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150329ea632b6015%3A0x3c81dfe017868520!2sBeit%20Lehem%20Rd%20114%2C%20Jerusalem!5e0!3m2!1sen!2sil!4v1762689021698!5m2!1sen!2sil"
                     loading="lazy"></iframe>
                 <h4 class="sidebar-header">Zoo Hours</h4>
-                <a class="sidebar-info" href="tel:+973585559631">058-555-9631</a>
-                <a class="sidebar-info" href="mailto:zoo@jjz.zoo">zoo@jjz.zoo</a>
+                <div class="sidebar-info">Sunday-Thursday: 09:00-17:00</div>
+                <div class="sidebar-info">Erev Shabbat/Chag: 09:00-13:00</div>
             </aside>
         </section>
         <section class="map-section">
@@ -131,7 +132,7 @@
                     <label>
                         Tell us how you enjoyed your tour.
                         <textarea name="reviewText" rows="3"
-                            placeholder="We loved seeing the penguins on our Cold Weather Tour..."></textarea>
+                            placeholder="We loved seeing the penguins on our Cold Weather Tour..." required></textarea>
                     </label>
                 </fieldset>
                 <div class="form-actions">

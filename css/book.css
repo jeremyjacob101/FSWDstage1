@@ -123,12 +123,27 @@
 .sidebar-header {
     color: var(--black);
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .sidebar address {
     font-style: normal;
     color: #4b5563;
     line-height: 1.5;
+}
+
+.sidebar-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-exact-location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar a {
@@ -141,8 +156,12 @@
     border: 1px black solid;
     width: 100%;
     min-height: 250px;
-    margin: calc(0*var(--gap-padding));
+    margin-bottom: 10px;
     border-radius: var(--radius);
+}
+
+.sidebar-info {
+    color: #4b5563;
 }
 
 .form-actions>button {
