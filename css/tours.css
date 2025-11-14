@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px var(--white) solid;
+    border-bottom: 1px solid var(--white);
     margin: 0 5% var(--gap-padding) 5%;
     padding-bottom: var(--gap-padding);
 }
@@ -57,7 +57,7 @@
 
 .tours-table tbody tr:hover,
 .menu-table tbody tr:hover {
-    background-color: #eef6ff;
+    background-color: var(--off-white);
     transition: background-color 0.2s ease;
 }
 
