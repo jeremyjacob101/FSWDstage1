@@ -6,6 +6,7 @@
     width: 90%;
     border-top: 1px solid var(--white);
     padding-top: var(--gap-padding);
+    align-items: stretch;
 }
 
 .hero-main {
@@ -20,7 +21,7 @@
     overflow: hidden;
     border-radius: var(--radius);
     width: 100%;
-    height: 560px;
+    min-height: 560px;
 }
 
 .hero-img {
