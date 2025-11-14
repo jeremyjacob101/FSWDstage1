@@ -12,7 +12,9 @@
   --max-px: 999999px;
   --radius: 12px;
   --gap-padding: 20px;
-  --shadow: -4px 8px 25px rgba(255, 255, 255, 0.2);
+  --desktop-header-height: 4.5rem;
+  --mobile-header-height: 6.5rem;
+  --shadow: -4px 8px 25px rgba(255, 255, 255, 0.15);
 }
 
 * {
@@ -24,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--gap-padding) + 4.5rem + var(--gap-padding));
+  scroll-padding-top: calc(var(--gap-padding) + var(--desktop-header-height) + var(--gap-padding));
   text-align: left;
 }
 
@@ -36,7 +38,7 @@ body {
 }
 
 main {
-  margin-top: calc(var(--gap-padding) + 4.5rem + var(--gap-padding));
+  margin-top: calc(var(--gap-padding) + var(--desktop-header-height) + var(--gap-padding));
   justify-content: center;
 }
 
@@ -84,7 +86,7 @@ a:hover {
   padding: 1rem 2rem;
   margin: 0 2%;
   width: 96%;
-  height: 4.5rem;
+  height: var(--desktop-header-height);
 }
 
 .header-top-blur {
@@ -93,7 +95,7 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  height: calc(var(--gap-padding) + 4.5rem);
+  height: calc(var(--gap-padding) + var(--desktop-header-height));
 }
 
 .inner-header {
@@ -224,7 +226,16 @@ a:hover {
 
 .copyright {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   left: var(--gap-padding);
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.copyright p {
   margin: 0;
   padding: 0;
 }
@@ -234,6 +245,8 @@ a:hover {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  margin: 0 5%;
+  width: 90%;
 }
 
 .page-header>h2,
@@ -250,21 +263,35 @@ a:hover {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
+
+  html,
+  body {
+    scroll-padding-top: calc(var(--gap-padding) + var(--mobile-header-height) + var(--gap-padding));
+  }
+
+  main {
+    margin-top: calc(var(--gap-padding) + var(--mobile-header-height) + var(--gap-padding));
+  }
+
+  .header {
+    height: var(--mobile-header-height);
+  }
+
+  .header-top-blur {
+    height: calc(var(--gap-padding) + var(--mobile-header-height));
+  }
+
   .inner-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .navbar {
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 100%;
-    margin-top: 1rem;
+    flex-direction: row;
   }
 
-  .navbar .nav-link {
-    padding: 0.5rem 1rem;
-    /* width: 100%; */
+  .copyright {
+    flex-direction: column;
   }
 }

@@ -159,7 +159,7 @@ main {
     gap: calc(2*var(--gap-padding));
     position: sticky;
     bottom: var(--gap-padding);
-    z-index: var(--max-px);
+    z-index: var(--max);
 }
 
 .content-link {
@@ -181,8 +181,12 @@ main {
     text-decoration: none;
 }
 
-@media (max-width: 480px) {
-    .animals-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 700px) {
+    .hero-slider {
+        width: 70%;
+    }
+
+    .content-links {
+        gap: calc(0.5*var(--gap-padding));
     }
 }
