@@ -267,19 +267,20 @@ a:hover {
 
   html,
   body {
-    scroll-padding-top: calc(var(--gap-padding) + var(--mobile-header-height) + var(--gap-padding));
+    scroll-padding-top: calc(calc(0.5*var(--gap-padding)) + var(--mobile-header-height) + var(--gap-padding));
   }
 
   main {
-    margin-top: calc(var(--gap-padding) + var(--mobile-header-height) + var(--gap-padding));
+    margin-top: calc(calc(0.5*var(--gap-padding)) + var(--mobile-header-height) + var(--gap-padding));
   }
 
   .header {
+    top: calc(0.5*var(--gap-padding));
     height: var(--mobile-header-height);
   }
 
   .header-top-blur {
-    height: calc(var(--gap-padding) + var(--mobile-header-height));
+    height: calc(calc(0.5*var(--gap-padding)) + var(--mobile-header-height));
   }
 
   .inner-header {
